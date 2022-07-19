@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Person List-->
+        <!--Persons List-->
         <scene sceneID="AK7-7K-67N">
             <objects>
                 <tableViewController id="myv-Tl-QFG" customClass="FirstContactListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,12 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contact" id="z5c-Lw-aem">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contact" textLabel="rvZ-qK-LSZ" style="IBUITableViewCellStyleDefault" id="z5c-Lw-aem">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z5c-Lw-aem" id="432-6j-ZQP">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rvZ-qK-LSZ">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="so5-8D-Gb6" kind="show" id="EHu-ow-XjB"/>
@@ -34,7 +43,7 @@
                             <outlet property="delegate" destination="myv-Tl-QFG" id="cct-6O-tcV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Person List" id="zbB-ym-SdT">
+                    <navigationItem key="navigationItem" title="Persons List" id="zbB-ym-SdT">
                         <barButtonItem key="backBarButtonItem" title="back" id="IWP-c9-AHM"/>
                     </navigationItem>
                 </tableViewController>
@@ -51,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pkv-TC-T1B">
-                                <rect key="frame" x="16" y="108" width="382" height="68"/>
+                                <rect key="frame" x="16" y="160" width="382" height="68"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olg-z0-x7d">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
@@ -78,6 +87,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="vJL-dM-6mx"/>
                     <navigationItem key="navigationItem" title="Name" id="Sjc-tK-j4u"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="z58-m7-ewO" id="X1J-PF-zWs"/>
+                        <outlet property="phoneLabel" destination="olg-z0-x7d" id="Igs-IN-Xu3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxW-Hy-nL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,8 +122,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dAg-tj-pHM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="90Y-11-LmR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uGf-kb-PgB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="uGf-kb-PgB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -122,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="1511.5942028985507" y="517.63392857142856"/>
         </scene>
-        <!--Person List-->
+        <!--Persons List-->
         <scene sceneID="sWw-bz-tQa">
             <objects>
                 <tableViewController id="DE6-sU-zwk" customClass="SecondContactListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0a5-wL-bTK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fullContact" id="0a5-wL-bTK">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0a5-wL-bTK" id="yiE-OV-x9o">
@@ -145,7 +158,7 @@
                             <outlet property="delegate" destination="DE6-sU-zwk" id="GhP-V2-IQa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Person List" id="rwp-2B-Pki"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="rwp-2B-Pki"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9x-eH-fUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,8 +170,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="8Oz-0W-E54" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contacts" id="X5I-oO-rcr"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fgO-qh-Egc">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fgO-qh-Egc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
