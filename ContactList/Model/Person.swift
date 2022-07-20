@@ -4,6 +4,7 @@
 //
 //  Created by Дмитрий Дуров on 19.07.2022.
 //
+import Foundation
 
 struct Person {
     let name: String
@@ -16,18 +17,24 @@ struct Person {
     }
     
     static func getContact() -> [Person] {
-        [
-            Person(name: "Hana", surname: "Montana", phone: "8", email: "hhh@mail.ru"),
-            Person(name: "Hana", surname: "Montana", phone: "8235922", email: "hhh@mail.ru"),
-            Person(name: "Hana", surname: "Montana", phone: "822", email: "hhh@mail.ru"),
-            Person(name: "Hana", surname: "Montana", phone: "8232", email: "hhh@mail.ru"),
-            Person(name: "Hana", surname: "Montana", phone: "444922", email: "hhh@mail.ru"),
-            Person(name: "Hana", surname: "Montana", phone: "85555566645922", email: "hhh@mail.ru"),
-            Person(name: "Hana", surname: "Montana", phone: "8111112", email: "hhh@mail.ru")
-        ]
+        var persons: [Person] = []
+        
+        let names = DataStore.data.names.shuffled()
+        let surnames = DataStore.data.surnames.shuffled()
+        let phones = DataStore.data.phones.shuffled()
+        let emails = DataStore.data.emails.shuffled()
+        
+        for index in 0...(names.count - 1) {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                phone: phones[index],
+                email: emails[index]
+            )
+            persons.append(person)
+        }
+        return persons
     }
 }
 
-class DataStore {
-    
-}
+
