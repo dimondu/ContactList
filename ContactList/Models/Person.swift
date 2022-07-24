@@ -17,14 +17,15 @@ struct Person {
     }
     
     static func getContact() -> [Person] {
+        
         var persons: [Person] = []
         
-        let names = DataStore.data.names.shuffled()
-        let surnames = DataStore.data.surnames.shuffled()
-        let phones = DataStore.data.phones.shuffled()
-        let emails = DataStore.data.emails.shuffled()
+        let names = DataStore.shared.names.shuffled()
+        let surnames = DataStore.shared.surnames.shuffled()
+        let phones = DataStore.shared.phones.shuffled()
+        let emails = DataStore.shared.emails.shuffled()
         
-        for index in 0...(names.count - 1) {
+        for index in 0..<names.count {
             let person = Person(
                 name: names[index],
                 surname: surnames[index],

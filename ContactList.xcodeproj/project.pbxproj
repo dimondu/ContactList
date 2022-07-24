@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F46A0786288D5EE200FF02F2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A0785288D5EE200FF02F2 /* TabBarViewController.swift */; };
 		F46BEC922886CD0F000CBA9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46BEC912886CD0F000CBA9D /* AppDelegate.swift */; };
 		F46BEC942886CD0F000CBA9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46BEC932886CD0F000CBA9D /* SceneDelegate.swift */; };
 		F46BEC992886CD0F000CBA9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46BEC972886CD0F000CBA9D /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F46A0785288D5EE200FF02F2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F46BEC8E2886CD0F000CBA9D /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46BEC912886CD0F000CBA9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F46BEC932886CD0F000CBA9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 		F46BEC902886CD0F000CBA9D /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				F4E462C82886E0FE00FC7FAB /* Model */,
+				F4E462C82886E0FE00FC7FAB /* Models */,
 				F4E462CE2886FC8100FC7FAB /* Services */,
 				F4E462C72886E0EE00FC7FAB /* ViewControllers */,
 				F4E462C92886E11200FC7FAB /* Storyboards */,
@@ -80,16 +82,17 @@
 				F46BECA52886D793000CBA9D /* FirstContactListViewController.swift */,
 				F46BECA72886DEBA000CBA9D /* SecondContactListViewController.swift */,
 				F46BECA92886DF41000CBA9D /* ContactDetailViewController.swift */,
+				F46A0785288D5EE200FF02F2 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		F4E462C82886E0FE00FC7FAB /* Model */ = {
+		F4E462C82886E0FE00FC7FAB /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F4E462C52886E0E200FC7FAB /* Person.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F4E462C92886E11200FC7FAB /* Storyboards */ = {
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46A0786288D5EE200FF02F2 /* TabBarViewController.swift in Sources */,
 				F4E462D02886FCA600FC7FAB /* DataStore.swift in Sources */,
 				F4E462C62886E0E200FC7FAB /* Person.swift in Sources */,
 				F46BEC922886CD0F000CBA9D /* AppDelegate.swift in Sources */,

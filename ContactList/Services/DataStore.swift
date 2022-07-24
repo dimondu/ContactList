@@ -9,6 +9,8 @@ import Foundation
 
 class DataStore {
     
+    static let shared = DataStore()
+    
     let names = [
         "Igor",
         "Alexey",
@@ -69,5 +71,6 @@ class DataStore {
         "xxxx@mail.ru"
     ]
     
-    static let data = DataStore()
+    private init() {}
+    
 }
